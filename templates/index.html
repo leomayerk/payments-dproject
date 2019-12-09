@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Métricas</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='materialize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper indigo lighten-2 z-depth-2">{{ titulo }}
+            </div>
+        </nav>
+
+        <div id="banner">
+            <style type="text/css">
+                #banner {
+                    padding: 14em 0 12em 0;
+                    background-image: url(static/banner.jpg);
+                    background-size: cover;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    text-align: center;
+                }
+                p {
+                    font-size: 1.25em;
+                    margin-bottom: 1.75em;
+                }
+
+            </style>
+            <div class="content">
+                <h2>Visualize já suas as Métricas SaaS de sua empresa!</h2>
+                <p>Selecione uma das opções abaixo</p>
+                <div class="row">
+                    <a class="btn btn-primary indigo darken-2" href="/mensal" role="button">por mês</a>
+                    <a class="btn btn-primary indigo darken-2" href="/clientes" role="button">por cliente </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="page-footer indigo lighten-2">
+            <div class="footer"></div>
+            <div class="footer-copyright indigo lighten-1">
+                <div class="container">
+                    © 2019 Copyright
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

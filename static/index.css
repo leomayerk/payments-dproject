@@ -1,0 +1,77 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,400|Pacifico";
+
+/* General */
+nav{
+    font-family: "Pacifico", cursive;
+    font-size:22pt;
+    text-align: center;
+}
+
+/* Banner */
+
+	#banner {
+		padding: 14em 0 12em 0;
+		background-image: url(static/banner.jpg);
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+
+	#banner h1 {
+			font-size: 3em;
+			color: #25a2c3;
+			line-height: 1em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+	}
+
+	#banner p {
+		font-size: 1.25em;
+		margin-bottom: 1.75em;
+	}
+
+	.content {
+		padding: 0.5em;
+	}
+
+	@media screen and (max-width: 1280px) {
+
+		#banner {
+			padding: 12em 0 10em 0;
+		}
+
+	}
+
+	@media screen and (max-width: 980px) {
+
+		#banner {
+			padding: 8em 6em 6em 6em;
+		}
+
+		#banner h1 {
+			font-size: 2.25em;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#banner {
+			padding: 6em 4em 4em 4em;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#banner {
+			padding: 4em 2em 2em 2em;
+		}
+
+		#banner h1 {
+			font-size: 2em;
+		}
+
+		#banner p {
+			font-size: 1em;
+		}
+	}
