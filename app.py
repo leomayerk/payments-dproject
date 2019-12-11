@@ -8,6 +8,7 @@ import json
 import matplotlib.pyplot as plt
 from json_api import json_api 
 
+app = Flask(__name__)
 
 #########################------BQ------#########################
 
@@ -112,6 +113,6 @@ def mensal():
 def clientes():
     return render_template('clientes.html', titulo='Métricas por Cliente', tables=[df_c.to_html(classes='data')])
 
-if __name__ == "__main__":
-	app.run(host='0.0.0.0',port=80)
+if __name__ == '__main__':
+    app.run()
 
