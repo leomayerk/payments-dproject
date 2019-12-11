@@ -3,6 +3,10 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 import numpy as np
 import pandas 
+import requests
+import json
+import matplotlib.pyplot as plt
+from json_api import json_api 
 
 
 #########################------BQ------#########################
@@ -27,6 +31,15 @@ order by int64_field_0 desc
 limit 10
 
 """
+
+#queryC = """
+#SELECT *
+#FROM `blissful-mile-261203.payments.payments`
+#WHERE  1 between MONTH(date_field_1) and MONTH(date_field_1 + 3-1)
+#order by int64_field_0 desc
+#limit 10
+#
+#"""
 query_job= client.query(queryC)
 resultC = query_job.result()
 
@@ -80,6 +93,8 @@ df_m = pandas.DataFrame({
 
 #print(df_m.sort_values('customerId',ascending=False).head())
 
+json_api()
+
 #########################------WEB------#########################
 app = Flask(__name__)
 app.secret_key = 'flask'
@@ -97,5 +112,6 @@ def mensal():
 def clientes():
     return render_template('clientes.html', titulo='Métricas por Cliente', tables=[df_c.to_html(classes='data')])
 
+if __name__ == "__main__":
+	app.run(host='0.0.0.0',port=80)
 
-app.run(debug=True)
