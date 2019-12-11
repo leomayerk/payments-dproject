@@ -29,10 +29,8 @@ queryC = """
 Select *
 from `blissful-mile-261203.payments.payments`
 order by int64_field_0 desc
-limit 10
 
 """
-
 #queryC = """
 #SELECT *
 #FROM `blissful-mile-261203.payments.payments`
@@ -41,6 +39,7 @@ limit 10
 #limit 10
 #
 #"""
+
 query_job= client.query(queryC)
 resultC = query_job.result()
 
@@ -71,7 +70,6 @@ queryM = """
 Select *
 from `blissful-mile-261203.payments.payments`
 order by int64_field_0 desc
-limit 10
 
 """
 query_job= client.query(queryM)
@@ -92,12 +90,9 @@ df_m = pandas.DataFrame({
 	'Valor':value,
 })
 
-#print(df_m.sort_values('customerId',ascending=False).head())
-
 json_api()
 
 #########################------WEB------#########################
-app = Flask(__name__)
 app.secret_key = 'flask'
 
 #Rotas
